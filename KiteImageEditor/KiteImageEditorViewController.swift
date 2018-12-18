@@ -29,7 +29,7 @@ import UIKit
     @objc func KiteImageEditorSavedEdits(to image: UIImage)
 }
 
-class ImageEditorViewController: UIViewController {
+class KiteImageEditorViewController: UIViewController {
     
     private struct Constants {
         static let toolButtonCornerRadius: CGFloat = 10.0
@@ -283,7 +283,7 @@ class ImageEditorViewController: UIViewController {
     }
 }
 
-extension ImageEditorViewController: UIGestureRecognizerDelegate {
+extension KiteImageEditorViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

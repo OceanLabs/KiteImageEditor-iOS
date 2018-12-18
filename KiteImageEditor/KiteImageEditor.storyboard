@@ -13,7 +13,7 @@
         <!--Image Editor View Controller-->
         <scene sceneID="bLt-sV-qxq">
             <objects>
-                <viewController storyboardIdentifier="KiteImageEditorViewController" id="RyO-IS-mff" userLabel="Image Editor View Controller" customClass="KiteImageEditorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KiteImageEditorViewController" id="RyO-IS-mff" userLabel="Image Editor View Controller" customClass="KiteImageEditorViewController" customModule="KiteImageEditor" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tfo-wF-Nnm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

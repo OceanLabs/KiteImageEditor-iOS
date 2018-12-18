@@ -26,11 +26,21 @@ import UIKit
 
 @objc public class KiteImageEditor: NSObject {
     
+    static let editorBundle = Bundle(for: KiteImageEditor.self)
+    static let editorResourceBundle: Bundle = {
+        guard let resourcePath = editorBundle.path(forResource: "KiteImageEditorResources", ofType: "bundle"),
+            let resourceBundle = Bundle(path: resourcePath)
+            else {
+                return editorBundle
+        }
+        
+        return resourceBundle
+    }()
+    
     @objc public static func editor(with image: UIImage, delegate: KiteImageEditorDelegate? = nil, aspectRatio: CGFloat = 1.0, minimumResolution: CGFloat = 0.0) -> UIViewController {
-        let editorBundle = Bundle(for: KiteImageEditor.self)
-        let storyBoard = UIStoryboard(name: "KiteImageEditor", bundle: editorBundle)
+        let storyBoard = UIStoryboard(name: "KiteImageEditor", bundle: editorResourceBundle)
         let editorNavigationController = storyBoard.instantiateViewController(withIdentifier: "KiteImageEditorNavigationController") as! UINavigationController
-        let editorViewController = editorNavigationController.viewControllers.first as! ImageEditorViewController
+        let editorViewController = editorNavigationController.viewControllers.first as! KiteImageEditorViewController
         editorViewController.image =  image
         editorViewController.containerRatio = aspectRatio
         editorViewController.minimumImageResolution = minimumResolution > 0.0 ? minimumResolution : nil
