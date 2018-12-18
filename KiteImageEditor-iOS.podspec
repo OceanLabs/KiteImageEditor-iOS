@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/OceanLabs/KiteImageEditor-iOS.git", :tag => "#{s.version}" }
   s.source_files  = ["KiteImageEditor/**/*.swift"]
   s.swift_version = "4.1"
-  s.resource_bundles  = { 'KiteImageEditorResources' => ['KiteImageEditor/KiteImageEditor.storyboard', 'KiteImageEditor/KiteImageEditor.xcassets'] }
+  s.resource_bundles  = { 'KiteImageEditorResources' => ['KiteImageEditor/KiteImageEditor.storyboard', 'KiteImageEditor/Resources/Assets.xcassets'] }
   s.module_name         = 'KiteImageEditor'
 
 end
